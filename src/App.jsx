@@ -1,6 +1,6 @@
 import './App.css'
-import Dashboard from './page/dashboard/Dashboard.jsx';
-import Login from './page/login/Login.jsx';
+import Dashboard from './pages/dashboard/Dashboard.jsx';
+import Login from './pages/login/Login.jsx';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
    <Login />
 
    <Dashboard />
+   
 
     </div>
   );
