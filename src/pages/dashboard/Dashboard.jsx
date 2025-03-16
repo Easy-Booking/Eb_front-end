@@ -1,6 +1,10 @@
 //import React from 'react'
-import { Settings,LayoutDashboard,Bell,Megaphone,BarChart2,Users,Sliders,CreditCard,LogOut,CalendarCheck,Search,CircleUser,Mail,HandPlatter,MapPin, List, Calendar,ChevronsUpDown,HeartHandshake,ClipboardList} from "lucide-react";
+import {Settings,LayoutDashboard,FolderKanban,Bell,Megaphone,Gem,BarChart2,Users,Sliders,CreditCard,LogOut,CalendarCheck,Search,CircleUser,Mail,HandPlatter,MapPin, List, Calendar,ChevronsUpDown,HeartHandshake,ClipboardList} from "lucide-react";
 import React, { useState } from 'react';
+//import { Button } from 'react';
+import { NavLink } from "react-router-dom";
+
+
 
 function Dashboard() {
   const [searchValue, setSearchValue] = useState("");
@@ -11,49 +15,123 @@ function Dashboard() {
       <h2 className="text-xl font-bold mb-6">Easy Booking</h2>
 
       <ul className="space-y-4">
-      <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
-          <LayoutDashboard size={20} />
-          <span>Dashboard</span>
+        
+      <li>
+          <NavLink 
+            to="/dashboard" 
+            className={({ isActive }) => 
+              `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+            }
+          >
+            <LayoutDashboard size={20} />
+            <span>Dashboard</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
-          <Settings size={20} />
-          <span>Settings</span>
+        <li>
+        <NavLink 
+        to="/Settings" 
+        className={({isActive})=> 
+        `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }
+          >   <Settings size={20} />
+          <span>Settings</span> 
+          </NavLink> 
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+        <NavLink 
+        to="/Notification" 
+        className={({isActive})=> 
+        `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }
+          > 
           <Bell size={20} />
           <span>Notifications</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+          <NavLink 
+          to="/Promotion"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`}>
           <Megaphone size={20} />
           <span>Promotions</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+          <NavLink 
+          to="/Report"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                 isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }>
           <BarChart2 size={20} />
-          <span>Report & Analytics</span>
+          <span>Report and Analytics</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+          <NavLink 
+          to="/User & Management"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                 isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }>
           <Users size={20} />
           <span>User Management</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+          <NavLink 
+          to="/Customization"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                 isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }>
           <Sliders size={20} />
           <span>Customization</span>
+          </NavLink>
         </li>
 
-        <li className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-md cursor-pointer">
+        <li>
+          <NavLink 
+          to="/Payment"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                 isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }>
           <CreditCard size={20} />
           <span>Payment</span>
+          </NavLink>
         </li>
 
-        <li className='flex items-center space-x-3  p-3 hover:bg-gray-700 rounded-md cursor-pointer'>
+        <li>
+          <NavLink 
+          to="/Login"
+          className={({isActive})=>
+          `flex items-center space-x-3 p-3 rounded-md cursor-pointer transition ${
+                 isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+              }`
+              }>
           <LogOut size={20}/>
           <span>Logout</span>
+          </NavLink>
         </li>
 
       </ul>
@@ -117,7 +195,7 @@ function Dashboard() {
     </div>
 
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 ml-[260px]">Dashboard Overview</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 ml-[280px]">Dashboard Overview</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ml-[255px]">
         
@@ -137,6 +215,37 @@ function Dashboard() {
           <Megaphone size={40} className="text-red-600 mb-3" />
           <h3 className="text-lg font-semibold">Upcoming Announcements</h3>
           <p className="text-lg text-gray-600">New features launching soon!</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div className="p-6">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ml-[255px]">
+        
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+          <Gem size={40} className="text-blue-600 mb-3" />
+          <h3 className="text-lg font-semibold">Upcoming Promotion</h3>
+          <p className="text-3xl font-bold text-gray-800 pt-[30px]"> 
+            <NavLink to="/Promotion"> <button className="bg-black text-lg hover:bg-teal-900 text-white rounded-md py-3 px-4 "> Click to see your promotion</button> </NavLink> </p>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+          <FolderKanban size={40} className="text-green-600 mb-3" />
+          <h3 className="text-lg font-semibold">Manage Availability</h3>
+          <p className="text-3xl font-bold text-gray-800 pt-[30px]"> <button className="bg-black hover:bg-teal-900 text-white text-lg py-2 px-6 rounded-md">Click to see </button> </p>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+          <Megaphone size={40} className="text-yellow-600 mb-3" />
+          <h3 className="text-lg font-semibold"> Comments/Feedback </h3> 
+          <p className="text-lg text-gray-600">We value your feedback! Let us know how we can improve.</p>
+          <br></br>
+          <button className="bg-black hover:bg-teal-900 text-white font-bold py-2 px-4 rounded-md">
+  Add your Feedback
+</button>
+
         </div>
 
       </div>
