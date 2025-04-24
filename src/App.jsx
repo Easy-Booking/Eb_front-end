@@ -15,6 +15,7 @@ import Report from './pages/Report/Report.jsx';
 import Notification from './pages/Notification/Notification.jsx';
 import Promotion from './pages/Promotion/Promotion.jsx';
 import Payment from './pages/Payment/Payment.jsx';
+import Pay from './pages/Payment/Pay.jsx';
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/Notification" element={<Notification/>}/>
           <Route path="/Promotion" element={<Promotion/>}/>
           <Route path="/Payment" element={<Payment/>}/>
+          <Route path="/Pay" element={<Pay/>}/>
           
         </Routes>
       </div>

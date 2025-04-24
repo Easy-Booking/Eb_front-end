@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Signup() {
   return (
@@ -112,7 +113,7 @@ function Signup() {
               >
                 Sign Up
               </button>
-              <p className='mt-[20px]'>Already have an account? <u> Login </u></p>
+              <p className='mt-[20px]'>Already have an account? <u><Link to='/Login'> Login </Link> </u></p>
             </div>
 
 

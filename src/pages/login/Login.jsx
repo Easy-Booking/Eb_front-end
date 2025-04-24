@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom';
 
 function Login() {
   return (
@@ -92,9 +93,7 @@ function Login() {
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
             Not a member?{' '}
-            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-              Create new account
-            </a>
+            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500"><Link to='/Signup'>Create new account</Link> </a>
           </p>
         </div>
       </div>
